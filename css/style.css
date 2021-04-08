@@ -1,0 +1,427 @@
+html {
+    --color-1:#fff;
+    --color-bg:#383736;
+    --color-2:orange;
+    --color-badge:white;
+   
+}
+html {
+   
+    color: var(--color-1);
+    font-family: 'Ubuntu', sans-serif;
+}
+.container {
+    width:100%;
+    
+}
+img {
+    max-width: 100%;
+}
+
+.img-mobile {
+    height:10em;
+    width:30%;
+    margin:auto 0;
+    margin:1em;
+}
+main {
+    text-align: center;
+}
+
+#main-nav {
+    position: fixed;
+    bottom: 0;
+    left:0;
+    right:0;
+    color:var(--color-1);
+    font-size: 1.2em;
+    background-color: var(--color-bg);
+    z-index: 100;
+   
+}
+
+
+
+#main-nav ul {
+    display: flex;
+    width:100%;
+    justify-content: space-between;
+    border-top:2px solid var(--color-2);
+}
+#main-nav ul li {
+   
+    color: var(--color-2);
+    font-weight: bold;
+    padding:0.5em 1em;
+    width:calc(100%/3);
+}
+
+#main-nav ul li a {
+    display: block;
+    display: flex;
+   flex-direction: column;
+    align-items: center;
+}
+#main-nav ul .active {
+    color: var(--color-1);
+     background-color: var(--color-2);
+ }
+ #main-nav ul .active i {
+    color: var(--color-1);
+   
+ }
+
+#main-nav ul li i {
+   color: var(--color-2);
+    padding:.5em;
+}
+
+
+
+@keyframes bubbles {
+    0% {
+        transform: translateX(50%) scale(1);
+    }
+    50% {
+      transform:translateX(50%) scale(8);
+      background-color: #e5e6bc;
+    }
+    100% {
+        transform: translateX(50%) scale(1);
+        background-color: #d2dcf7;
+    }
+}
+
+@keyframes color {
+    0%{color:rgb(181, 181, 241)}
+    50%{color:rgb(245, 176, 176)}
+    100%{color:rgb(181, 181, 241)}
+}
+
+
+
+
+.index {
+    height: 100vh;
+    overflow: hidden;
+}
+body {
+    background-color: var(--color-bg);
+    padding-bottom: 4em;
+    min-height:100vh;
+    position: relative;
+    
+   
+  
+}
+
+body {
+    
+    background: url('../img/glacier.jpg');
+    background-size: cover;
+    opacity:0.8;
+   
+}
+
+
+.title, .nav {
+    background-color: var(--color-bg);
+}
+
+header {
+    border-bottom: 2px solid var(--color-2);
+}
+
+img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+small {
+    font-size: 1rem;
+}
+
+#target {
+   
+    margin-left:2rem;
+    font-size: 4em;
+    display: flex;
+    animation: color 30s alternate infinite;
+}
+
+select {
+    color: white;
+    background-color: var(--color-bg);
+}
+.link {
+    font-size: 0.5em;
+}
+.link:hover {
+    color: var(--color-2);
+}
+
+/* Prtfolio */
+.portfolio i {
+    padding-left:.5em;
+}
+.portfolio { 
+    max-width: 100%;
+    width:100%;
+
+}
+
+.image {
+    margin:.5em auto;
+    min-width: 3em;
+    max-width:500px;
+    width:100%;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    overflow: hidden;
+    display: flex;
+    font-size: 0.8em;
+   border:1px solid var(--color-2);
+   background-color: rgb(70, 68, 68);
+  
+}
+
+.text-container {
+    width:100%;
+   height: 100%;
+  
+} 
+.text {
+  
+    width:100%;
+    font-style: italic;
+    font-weight: bold;
+    font-size:1.3em;
+    line-height: 1.5em;
+    text-align: center;
+}
+
+/*  */
+#home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+ .index main {
+    min-height: 60vh;
+
+}
+footer {
+    text-align: center;
+    padding:2em;
+}
+
+.title {
+    
+    padding:1em;
+    text-align: center;
+    font-size: 2em;
+}
+
+.badges {
+    display: flex;
+    flex-wrap: wrap;
+    padding:1em;
+    justify-content: center;
+   
+}
+
+.badge {
+    
+    margin:.3em;
+    padding: 0 1em;
+    max-width:fit-content;
+    font-size: 0.7em;
+    opacity:0.8;
+    
+}
+.work, .parcours {
+    opacity: 1;
+}
+.work .title, .parcours .title {
+    opacity:0.8;
+}
+.work nav, .parcours nav {
+    opacity: 1;
+}
+
+select {
+    margin:1em auto;
+    padding:.5em;
+    border-radius: 10px;
+    outline: none;
+    border:none;
+    
+}
+
+header {
+    opacity:1;
+}
+
+#formation {
+    background-color: var(--color-1);
+    color:var(--color-bg);
+    width:100%;
+    padding:1em .5em 0 .5em;
+}
+h2 {
+    padding:1em 3em;
+    margin:auto;
+    width:fit-content;
+    text-align: center;
+    background-color: var(--color-2);
+    border-radius: 5px;
+}
+.formation {
+    border-bottom: 1px solid var(--color-bg);
+    padding:1.5em 0;
+}
+.formation:last-child {
+    border:none;
+}
+@media (min-width:540px) {
+    .image {
+        flex-direction: row;
+    }
+}
+@media(min-width:900px)  {
+    .portfolio {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .image {
+        width:48%;
+    }
+}
+
+@media (min-width:1100px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        
+    }
+    header {
+        background-color: var(--color-bg);
+        opacity:0.8
+    }
+    #main-nav {
+      position: static;
+     
+    }
+
+    #main-nav ul {
+        border:none;
+       
+    }
+    #main-nav ul li {
+        padding:0 2em;
+        color:white;
+        
+        font-family: 'Nanum Gothic', sans-serif;
+    }
+    .menu-icon {
+        visibility: hidden;
+    }
+    #main-nav ul .active {
+        color: var(--color-2);
+        background-color: transparent;
+         
+     }
+     #main-nav ul li:hover {
+        color: var(--color-2);
+        background-color: transparent;
+         
+     }
+     
+     footer {
+         position: absolute;
+         bottom:2em;
+        left:0;
+        right:0;
+
+}
+
+/* Portfolio */
+.image {
+    min-width: 3em;
+    width:13em;
+    margin: .5em;
+    font-size: 1em;;
+    position: relative;
+    transition:.5s ease;
+   display: block;
+    max-height:40vh;
+    max-width: 100%;
+    border:none;
+   
+    
+}
+
+
+.active-img {
+    flex-grow:100;
+    max-width: 100%;
+    border-radius: 7px;
+    background-size: auto 100%;
+}
+
+
+.text-container {
+    width:100%;
+   height: 100%;
+    transform: translateY(400px);
+    opacity: 0;
+    display: none;
+   align-content: flex-end;
+    transition: 5s ease;
+    background: linear-gradient(354deg, black 0%, transparent 80%);
+
+} 
+.text {
+   align-self: flex-end;
+    width:100%;
+
+    font-style: italic;
+    font-weight: bold;
+    font-size:1.3em;
+    line-height: 1.5em;
+    text-align: center;
+}
+
+
+.portfolio {
+   flex-wrap: nowrap;
+    align-content: center;
+    min-width:500px ;
+    max-width: 1200px;
+    height:70vh;
+    margin:2rem auto;
+
+
+}
+
+.active-img .text-container {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0px);
+}
+#bubble {
+    width:5em; 
+    height:5em;
+    background-color: #e5aee6;
+    position:absolute;
+    bottom:-3em;
+    right:0;
+    z-index: -1;
+   
+    border-radius: 50%;
+    animation: bubbles 5s linear infinite ;
+    animation-direction: alternate;
+}    
+}

@@ -10,19 +10,20 @@
 <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
-    <title>Document</title>
+    <title>Présentation</title>
 </head>
-<body class="<?= $class?>">
+<body class="<?= $page?>" id='top'>
 <div class="container">
-    <header>
+    <header id="header">
         <div class="title"><h1>Laetitia Deschamps - Développeuse web fullstack</h1>
         <small> Prête pour travailler sur des projets passionants... </small></div>
        
         <nav id="main-nav">
             <ul>
-                <li><a href="index.php"><i class="menu-icon fas fa-home"></i> Présentation</a></li>
-                <li><a href="parcours.php">  <i class="menu-icon fas fa-code-branch"></i>Parcours</a></li>
-                <li><a href="portfolio.php"><i class="menu-icon fas fa-briefcase"></i> </i>Portfolio</a></li>
+                <li><a href="?page=home"><i class="menu-icon fas fa-home"></i> Présentation</a></li>
+                <li><a href="?page=parcours">  <i class="menu-icon fas fa-code-branch"></i>Parcours</a></li>
+                <li><a href="?page=work"><i class="menu-icon fas fa-briefcase"></i> </i>Portfolio</a></li>
+                <li><a href="?page=contact">  <i class="menu-icon fas fa-paper-plane"></i>Contact</a></li>
             </ul>
         </nav>
     </header>

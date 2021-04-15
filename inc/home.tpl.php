@@ -1,7 +1,7 @@
 <main id="home">
 
-<div class="letters">
+<section class="letters">
     <p id="target"></p>
-</div>
+</section>
 <div id="bubble"></div>
 </main>

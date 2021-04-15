@@ -1,17 +1,15 @@
 const app = {
-    letterIndex:0,
-    wordIndex:0,
-    words:[],
+    
     compteur:0,
     init:function() {
-        app.letterIndex=0;
-        app.wordIndex=0;
+        display.init();
+        contact.init();
         app.compteur=0;
-        app.words=['Développer', 'Inventer', "S'améliorer", 'Apprendre'];
-       app.displayActiveTab();
-       let images = document.querySelectorAll('.image');
+       
+       display.displayActiveTab();
+       let images = document.querySelectorAll('.portfolio__image');
        images.forEach(image=>{
-           app.displayBackground(image);
+           display.displayBackground(image);
            image.addEventListener('click', app.handleImageClick);
        });
 
@@ -19,73 +17,39 @@ const app = {
        
       
        document.querySelector('.portfolio').firstElementChild.classList.add('active-img');
-       document.querySelector('#techno').addEventListener('change', app.handleTypeChange);
+       document.querySelector('#site-type').addEventListener('change', app.handleTypeChange);
        window.addEventListener('resize', app.handleWindowResize);
 
 
     },
     handleWindowResize:function() {
-        let images = document.querySelectorAll('.image');
+        let images = document.querySelectorAll('.portfolio__image');
         images.forEach(image=>{
            
             if(image.querySelector('img'))image.querySelector('img').remove();
-            app.displayBackground(image);
+           display.displayBackground(image);
            
         });  
     },
-    displayBackground:function(image) {
-        console.log(document.body.width);
-        if(screen.width  > 1100) {
-            image.style.background='url(img/'+ image.querySelector('.url').textContent + ')';
-            image.style.backgroundPosition="center";
-            image.style.backgroundSize="cover";
-        } else {
-            let img = document.createElement('img');
-            img.classList.add('img-mobile')
-            img.src="img/"+ image.querySelector('.url').textContent;
-            if(screen.width > 540) {
-             
-                if(app.compteur % 2 == 0) {
-                    image.style.background='#4a1818f5';
-                    image.prepend(img);
-                } else {
-                    image.style.background='#232121f5';
-                    image.appendChild(img)
-                }
-              app.compteur++;
-            }
-            else {
-                if(app.compteur % 2 == 0) {
-                    image.style.background='#4a1818f5';
-                    
-                } else {
-                    image.style.background='#232121f5';
-                }
-                image.prepend(img);
-              app.compteur++;
-            }
-            
-        }
-        
-    },
+    
     loop:function() {
         const target = document.querySelector('#target');
         setTimeout(()=> {
-            if(app.wordIndex >= app.words.length) {      
-                app.wordIndex = 0;
-                app.letterIndex = 0;
+            if(display.wordIndex >= display.words.length) {      
+                display.wordIndex = 0;
+                display.letterIndex = 0;
                 app.loop();
                 
             }
-            else if(app.letterIndex < app.words[app.wordIndex].length) {
+            else if(display.letterIndex < display.words[display.wordIndex].length) {
             
-                app.createLetter();
-                app.letterIndex++;
+                display.createLetter();
+                display.letterIndex++;
                 app.loop();
         }
        else {
-            app.wordIndex++;
-            app.letterIndex=0;
+            display.wordIndex++;
+            display.letterIndex=0;
             setTimeout(()=> {
                 app.loop();
             }, 2000);
@@ -93,31 +57,10 @@ const app = {
     }, 150)
 
     },
-    createLetter:function() {
-        
-        const target = document.querySelector('#target');
-        let span = document.createElement('span');
-        target.appendChild(span);
-        span.textContent=app.words[app.wordIndex][app.letterIndex] ;
-        
-        setTimeout(()=> {
-            span.remove();
-        }, 2000)
-    },
-    displayActiveTab:function() {
-        let tabs = document.querySelectorAll('#main-nav li a');
-        tabs.forEach(tab=>  {
-            tab.classList.remove('active');
-          if(tab.href == document.location.href) {
-              tab.parentNode.classList.add('active');
-          }
-          
-        })
-    },
     
     handleImageClick:function(event) {
         console.log(event.currentTarget);
-        let images = document.querySelectorAll('.image');
+        let images = document.querySelectorAll('.portfolio__image');
         images.forEach(image=> {
             image.classList.remove('active-img');
         })
@@ -129,14 +72,14 @@ const app = {
        
        let type = event.target.value  ;
        let count = 0;
-       const images = document.querySelectorAll('.image');
+       const images = document.querySelectorAll('.portfolio__image');
       
         images.forEach(image=> {
             image.classList.remove('active-img');
             image.style.display = 'block';
             if(type) {
              
-            if(image.querySelector('.type').textContent != type) {
+            if(image.querySelector('.portfolio__type').textContent != type) {
                 
                 image.style.display = 'none';
     

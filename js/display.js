@@ -7,8 +7,16 @@ const display = {
         display.wordIndex=0;
         display.words=['Développer', 'Inventer', "S'améliorer", 'Apprendre'];
         display.displayProgress();
-       
+       document.querySelectorAll('.scroll').forEach(scroll=> {
+           scroll.addEventListener('click', display.handleScroll)
+       })
+
     }, 
+    handleScroll:function(e) {
+       let ancre = e.currentTarget.dataset.target;
+       location.href = "#" + ancre;
+    },
+   
     createLetter:function() {
         
         const target = document.querySelector('#target');

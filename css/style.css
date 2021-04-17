@@ -8,8 +8,10 @@ html {
     --color-bg-2:#1f1f1f54;
     --color-error:red;
     color: var(--color-1);
+    --color-timeline : yellow;
     font-family: 'Ubuntu', sans-serif;
     text-align: center;   
+    
 }
 main {
     flex-grow:1;
@@ -17,12 +19,10 @@ main {
 body {
     background-color: var(--color-bg);
     background: url('../img/glacier.jpg');
-    background-size: cover;
+    background-attachment: fixed;
     min-height:100vh;
     position: relative;
-    opacity:0.85;
     overflow-x: hidden;
-   
 }
 img {
     max-width: 100%;
@@ -118,11 +118,12 @@ header {
  .hidden {
     display: none;
 }
+.visible {
+    display: block;
+}
 
 /* main */
-.parcours main {
-    background-color: var(--color-bg-2);
-}
+
 .home main {
     display: flex;
     flex-direction: column;
@@ -160,12 +161,15 @@ header {
     bottom:2em;
     right:0;
     font-size: 3em;
-    color:var(--color-1);
+    color:var(--color-2);
+    z-index: 100;
 }
 /* CV infos */
 .cv-section {
-    color:var(--color-1);
-    padding:1em 1em 0 1em;
+    border-top:30px solid var(--color-1);
+    color:var(--color-bg);
+    margin-bottom: 3em;
+    position: relative;
 }
 
 /* .cv-section__container {
@@ -176,12 +180,9 @@ header {
     
 } */
 .cv-section h2 {
-    padding:1em 3em;
-    margin:1em auto;
-    width:fit-content;
+    padding:2em 3em;
+    width:100%;
     text-align: center;
-    background-color:var(--color-3);
-    border-radius: 5px;
     color:var(--color-1);
     font-size: 1.5em;
 }
@@ -190,19 +191,33 @@ header {
 }
 
 .cv-section__infos {
-    color: var(--color-1);
+    color: var(--color-bg);
+   
     width:100%;
     max-width:1200px;
-    margin:auto;
-    border-bottom:2px solid var(--color-2);
-    padding:1.5em 0;
+    margin:2em auto;
+    
+    border-radius: 5px;
+    padding:.5em 1em;
     font-size: 1.1em;
+   
     
     }
-
+.cv-section__infos:not(.skills-section__infos) {
+    background-color: rgba(255, 255, 255, 0.85);
+}
+    
+   
+.cv-section__container {
+    margin:auto;
+    padding: 0 .5em;
+    
+}
 .cv-section__infos p {
     line-height: 1.2em;
+   
 }
+
 .cv-section__infos p:first-child {
     font-weight: bold;
     font-size: 1.3em;
@@ -211,30 +226,32 @@ header {
     font-size: 1em;
     font-style: italic;
 }
-
+.scroll {
+    display: none;
+}
 /* Compétences */
 
 .skills-title {
-    padding:1em 0 ;
+    padding:0.5em 0 ;
     font-size: 1.5em;
+    color:var(--color-1);
     border-bottom: 2px solid var(--color-2);
 }
 .skills-section {
     width:100%;
     max-width:500px;
     font-size: 1.3em; 
-    margin:auto;
+    margin:0 auto;
+    
 }
-.skills-section ul {
-    padding:1.5em 0;
-}
+
 .skills-section__name {
-    margin:1em 0;
+    margin:0.5em 0;
+    color:var(--color-1);
 }
 .skills-section__progress-bar {
     height:2.5em;
     border: 2px solid var(--color-badge);
-    border-radius: 10px;
 }
 .skills-section__progress-bar .full {
     height:100%; 
@@ -479,6 +496,116 @@ footer {
     .portfolio__image {
         width:48%;
     }
+    .cv nav {
+        height:84vh;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .cv nav ul {
+       flex-direction: column;
+       width: 70%;
+    }
+
+    .cv nav ul li:nth-child(odd) {
+        align-self: flex-start;
+        
+    }
+    .cv nav ul li:nth-child(even) {
+        align-self: flex-end;
+    }
+    .cv nav ul li a {
+            font-size: 3em;
+            background-color: transparent;       
+}
+    .cv-section {
+        height:100vh;
+        position: relative;
+    }
+    .cv-section__container {
+        position: relative;
+    }
+    #divers .cv-section__container {
+        min-height: 50vh;
+        margin:auto;
+    }
+    .cv-section__container:not(.skills)::before {
+        
+            content: '';
+            position:absolute;
+            left:50%;
+            width:2px;
+            top:1em;
+            bottom: 1em;
+            background:#fff;
+            z-index:1;
+          
+    }
+
+   .left {
+       float: left;
+
+   }
+   .right {
+       float: right;
+   }
+   #competences .cv-section__container {
+    display: flex;
+    }   
+    #competences .cv-section__infos {
+        border:none;
+    }
+   .cv-section__infos:not(.skills-section__infos) {
+    background-color: transparent;
+    color:var(--color-1);
+   }
+   .skills-section__infos {
+       margin:0 auto;
+   }
+    .cv-section__infos:not(.skills-section__infos)  {
+        
+        width:50%;
+        margin:0;
+        position: relative;
+    }
+    .cv-section__timeline {
+        height:2em;
+        width:2em;
+        position: absolute;
+        top:50%;
+        border-radius: 50%;
+        z-index: 100;
+        }
+    .left .cv-section__timeline {
+        right:0;
+        transform: translate(50%, -50%);
+        background-color: var(--color-2);
+    }
+    .right .cv-section__timeline {
+        left:0;
+        background-color: var(--color-bg);
+        transform: translate(-50%, -50%);
+    }
+    #back-to-top {
+        color: white;
+    }
+  
+    .scroll  {
+        display: block;
+        font-size: 5em;
+        position: absolute;
+        bottom:1.5em;
+        left:50%;
+        transform: translateX(-40%);
+        color: var(--color-1);
+      
+    }
+
+   
+    .clear {
+        clear: both;
+    }
  
 }
 
@@ -530,7 +657,10 @@ footer {
         border-radius: 50%;
         animation: bubbles 5s linear infinite ;
         animation-direction: alternate;
-    } 
+    }
+    
+    /* CV */
+    
     /* Contact */
     #contact {
         display: flex;
@@ -545,7 +675,7 @@ footer {
 
     .contact-infos  {
         padding:2em; 
-    border-right: 2px solid var(--color-2);
+
     }
 
     .contact main {
@@ -592,5 +722,12 @@ footer {
     .portfolio__text {
        align-self: flex-end;
     }
-  
+    .scroll {
+        bottom: 0;
+    }
+    .cv-section__infos:not(.skills-section__infos)  {
+        margin:1em 0;
+       
+    }
+    
 }

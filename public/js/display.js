@@ -2,6 +2,7 @@ const display = {
     letterIndex:0,
     wordIndex:0,
     words:[],
+    animationDuration:0.5,
     init:function() {
         display.letterIndex=0;
         display.wordIndex=0;
@@ -12,9 +13,7 @@ const display = {
        })
        document.querySelector('#hamburger').addEventListener('click', display.handleHamburgerClick);
        document.addEventListener('scroll', display.handleHamburgerDisplay);
-    //    document.querySelectorAll('nav li a').forEach(navItem => {
-    //        navItem.addEventListener('click', display.handleTabClick);
-    //    })
+       document.querySelector('.scene__character').addEventListener('click', display.handleAnimationCLick);
 
     }, 
     handleScroll:function(e) {
@@ -24,12 +23,23 @@ const display = {
    handleHamburgerClick:function() {
     document.querySelector('#hamburger').classList.toggle('open');
    },
+   handleAnimationCLick:function() {
+    
+       display.animationDuration -=0.1;
+        
+    display.animationDuration > 0 ? display.animationDuration = display.animationDuration.toFixed(1) : display.animationDuration == 0;
+    document.querySelector('.scene__character').style.animationDuration = display.animationDuration +'s';
+    console.log(display.animationType);
+    
+   },
    handleHamburgerDisplay:function() {
       
-    if(window.scrollY > 1000){
+    if(window.scrollY > 300){
         document.getElementById('hamburger').classList.add('visible');
+        document.getElementById('back-to-top').classList.add('visible');
     } else {
         document.getElementById('hamburger').classList.remove('visible');
+        document.getElementById('back-to-top').classList.remove('visible');
     }
     let links = document.querySelectorAll('nav li a');
     links.forEach(link=> {

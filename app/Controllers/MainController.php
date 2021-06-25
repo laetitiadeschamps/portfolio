@@ -22,18 +22,18 @@ class MainController {
                 'url'=>'#'
             ],
             
-            'Nouveau site' => [
-                'image_name'=>'ecommerce.jpg',
-                'badges'=>['HTML', 'CSS', 'PHP'], 
-                'description'=> 'A déterminer',
-                'type'=>'ecommerce',
+            'Messagerie' => [
+                'image_name'=>'logo-messagerie.png',
+                'badges'=>['JS', 'AJAX', 'POO', 'SQL', 'Websockets', 'Security'], 
+                'description'=> 'Messagerie en ligne avec système d\'amis et notifications',
+                'type'=>'social',
                 'url'=>'#'
             ],
-            'Nouveau site 2' => [
-                'image_name'=>'php.png',
-                'badges'=>['HTML', 'CSS', 'PHP'], 
-                'description'=> 'A déterminer',
-                'type'=>'vitrine_contact',
+            'Carte interactive' => [
+                'image_name'=>'map.jpg',
+                'badges'=>['API', 'JS', 'API REST', 'SQL'], 
+                'description'=> 'Carte interactive basée sur l\'API leaflet',
+                'type'=>'map',
                 'url'=>'#'
                 ]
             ];
@@ -43,7 +43,14 @@ class MainController {
                 'Bootstrap' => new Skills('Bootstrap', '#886518', 60),
                 'JS'=> new Skills('JS', '#7598e8', 80),
                 'PHP' => new Skills('PHP', '#e89075', 80),
-                'POO'=>new Skills('POO', '#a72c2c', 60)
+                'POO'=>new Skills('POO', '#a72c2c', 60),
+                'Websockets'=>new Skills('Websockets', '#ffc107', 60),
+                'Security'=>new Skills('Security', '#00bcd4', 60),
+                'AJAX'=>new Skills('AJAX', '#a72c92', 60),
+                'API'=>new Skills('API', '#2c58a7', 60),
+                'SQL'=>new Skills('SQL', '#607d8b', 60),
+                'API REST'=>new Skills('API REST', '#ffeb3b', 60),
+
             ];
             $langues = [
                 'Anglais' => new Skills('Anglais', '#0d5356', 95),

@@ -1,9 +1,8 @@
-<section id="contact">
+<section id="contact" data-aos="zoom-in">
         <article class="contact-infos">
             <h2>Vous pouvez me contacter : </h2>
             <p>Laetitia Deschamps</p>
-            <p>147 rue des jardins, 83600 FREJUS</p>
-            <p><a href="tel:+33617245207" >06.17.24.52.07</a></p>
+            <p>83600 FREJUS</p>
             <p><a href="mailto:deschamps.laetitia33@gmail.com">deschamps.laetitia33@gmail.com</a></p>
             <p><a href="https://www.linkedin.com/in/laetitia-deschamps-3298238b/"><i class="fab fa-linkedin"></i></a></p>
         </article>
@@ -40,3 +39,4 @@
             <?php include __DIR__.'/flash.tpl.php';  ?>
         </form>
 </section>
+</div>

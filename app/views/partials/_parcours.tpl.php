@@ -1,50 +1,31 @@
-
 <section class="cv" id="parcours" >
-
-    <div id="back-to-top">
-        <a href="#top"><i class="fas fa-arrow-circle-up"></i></a>
-    </div>
-    <article class="cv-menu" id="parcours-nav">
-    
-    <h2>Mon parcours</h2>
-    
-       
+    <article class="cv-menu" id="parcours-nav"> 
+        <h2>Mon parcours</h2>
         <nav> 
-        <ul>
-            <li data-aos="fade-down-left"><a href="#formation">Formation</a><div class="cv-menu__inner cv-menu__inner--formation"></div></li>
-            <li data-aos="fade-down-right"><a href="#experiences">Expériences</a><div class="cv-menu__inner cv-menu__inner--experiences"></div></li>
-            <li data-aos="fade-up-left"><a href="#competences">Compétences</a><div class="cv-menu__inner cv-menu__inner--competences"></div></li>
-            <li data-aos="fade-up-right"><a href="#divers">Autre</a><div class="cv-menu__inner cv-menu__inner--divers"></div></li>
-        </ul>
+            <ul>
+                <li data-aos="fade-down-left"><a href="#formation">Formation</a><div class="cv-menu__inner cv-menu__inner--formation"></div></li>
+                <li data-aos="fade-down-right"><a href="#experiences">Expériences</a><div class="cv-menu__inner cv-menu__inner--experiences"></div></li>
+                <li data-aos="fade-up-left"><a href="#competences">Compétences</a><div class="cv-menu__inner cv-menu__inner--competences"></div></li>
+                <li data-aos="fade-up-right"><a href="#divers">Autre</a><div class="cv-menu__inner cv-menu__inner--divers"></div></li>
+            </ul>
         </nav>
-
-    
-   
-        
-       <div><i class="fas fa-chevron-down scroll" data-target="formation"></i></div>
+        <div>
+            <i class="fas fa-chevron-down scroll" data-target="formation"></i>
+        </div>
       
     
     </article>
     <article id="formation" class="cv-section">
-           
             <h2>
                 <i class="fas fa-graduation-cap"></i>Formation
             </h2>
-   
             <article class="cv-section__container">
-            
-
-
                 <div class="cv-section__infos left" data-aos="fade-left">
-                 
                     <p>Développement Web et Web Mobile </p><p><span class="school">O'clock</span></p>
-            
                     <p class="dates">02/2021 - 08/2021</p>
                     <p>HTML5/CSS3, PHP, Javascript, POO, Git</p>
                     <div class="cv-section__timeline"></div>
                     </div>
-                   
-                   
                     <div class="clear"></div>
                 <div class="cv-section__infos right" data-aos="fade-right">
                 
@@ -119,17 +100,16 @@
             <div class="cv-section__container skills">
                 <div class="skills-section">
                 <h3>Langages et frameworks</h3>
-                <img data-aos="zoom-in" src="<?= $_SERVER['BASE_URI']?>/img/html.png" alt="">
-                <img data-aos="zoom-in" src="<?= $_SERVER['BASE_URI']?>/img/css.png" alt="">
-                <img data-aos="zoom-in" src="<?= $_SERVER['BASE_URI']?>/img/js.png" alt="">
-                <img data-aos="zoom-in" src="<?= $_SERVER['BASE_URI']?>/img/php.svg" alt="">
-                <img data-aos="zoom-in" src="<?= $_SERVER['BASE_URI']?>/img/symfony.png" alt="">
-                <img data-aos="zoom-in" src="<?= $_SERVER['BASE_URI']?>/img/lumen.png" alt="">
-                <img data-aos="zoom-in" src="<?= $_SERVER['BASE_URI']?>/img/sql.svg" alt="">
+                <img data-aos="zoom-in" src="<?= $_SERVER['BASE_URI']?>/img/html.png" alt="html">
+                <img data-aos="zoom-in" src="<?= $_SERVER['BASE_URI']?>/img/css.png" alt="css">
+                <img data-aos="zoom-in" src="<?= $_SERVER['BASE_URI']?>/img/js.png" alt="javascript">
+                <img data-aos="zoom-in" src="<?= $_SERVER['BASE_URI']?>/img/php.svg" alt="php">
+                <img data-aos="zoom-in" src="<?= $_SERVER['BASE_URI']?>/img/symfony.png" alt="symfony">
+                <img data-aos="zoom-in" src="<?= $_SERVER['BASE_URI']?>/img/lumen.png" alt="lumen">
+                <img data-aos="zoom-in" src="<?= $_SERVER['BASE_URI']?>/img/sql.svg" alt="sql">
                 </div>
                 <div class="skills-section">
                     <h3>Autres compétences web</h3>
-                    
                                 <div data-aos="zoom-in" class="skills-section__card">
                                    <div class="skills-section__card--title"> <i class="fas fa-sitemap"></i>Concepts et méthodes</div>
                                    <div class="skills-section__card--body">
@@ -164,25 +144,19 @@
                                 </div>
                                 </div>
                                 <div data-aos="zoom-in" class="skills-section__card">
-                                <div class="skills-section__card--title"> <i class="fas fa-database"></i>Back-end </div>
-                                <div class="skills-section__card--body">
-                                <ul>
-                                    <li>API & API REST</li>
-                                    <li>Doctrine & Eloquent</li>
-                                    <li>CMS Wordpress</li>
-                                </ul>    
-                               </div> 
+                                    <div class="skills-section__card--title"> <i class="fas fa-database"></i>Back-end </div>
+                                    <div class="skills-section__card--body">
+                                        <ul>
+                                            <li>API & API REST</li>
+                                            <li>Doctrine & Eloquent</li>
+                                            <li>CMS Wordpress</li>
+                                        </ul>    
+                                    </div> 
                                 </div>
-                               
-                            
-                
                 </div>
             </div>
-           
-          
         </article>
         <article id="divers" class="cv-section">
-       
             <h2>
                 <i class="fas fa-globe"></i>Divers
             </h2>

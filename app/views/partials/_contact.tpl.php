@@ -39,4 +39,4 @@
             <?php include __DIR__.'/flash.tpl.php';  ?>
         </form>
 </section>
-</div>
+

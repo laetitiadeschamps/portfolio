@@ -49,7 +49,7 @@ class MainController {
                 'AJAX'=>new Skills('AJAX', '#a72c92', 60),
                 'API'=>new Skills('API', '#2c58a7', 60),
                 'SQL'=>new Skills('SQL', '#607d8b', 60),
-                'API REST'=>new Skills('API REST', '#ffeb3b', 60),
+                'API REST'=>new Skills('LUMEN/API REST', '#ffeb3b', 60),
 
             ];
             $langues = [
@@ -68,19 +68,34 @@ class MainController {
             'langues'=>$langues
         ]);
     }
-
+    // method for handling message from contact form
     public function homeSubmit() {
-        $this->addFlashMessage('Message envoyé!');
+        if(isset($_POST['name'])) {
+            $name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_STRING);
+            $email =  filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
+            $message = filter_input(INPUT_POST, 'message', FILTER_SANITIZE_STRING) ;
+
+            if($name && $email && $message) {
+                $mainObj= new MainController();
+                $sanitizedName= $mainObj->sanitizeValue($name);
+                $sanitizedEmail= $mainObj->sanitizeValue($email);
+                $sanitizedMessage= $mainObj->sanitizeValue($message);
+                $this->addFlashMessage('Message envoyé!');
+                $sanitizedName . ' ' . $sanitizedEmail . ' ' . $sanitizedMessage;
+            } else {
+                $this->addFlashMessage('Veuillez revérifier votre saisie!');
+            }   
+    
+        }
+       
         global $router;
         header('Location: '. $router->generate('main-home'));
     }
     public function addFlashMessage($message) {
-        
-            $_SESSION['infos'][] = $message;
-      
+            $_SESSION['infos'][] = $message;  
     }
     public function show($viewName, $viewVars=[]) {
-        $message = $viewVars['message'] ??'';
+        // $message = $viewVars['message'] ??'';
         $router = $GLOBALS['router'];
         require_once __DIR__ .'/../views/header.tpl.php';
         require_once __DIR__ .'/../views/' . $viewName . '.tpl.php';

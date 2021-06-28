@@ -7,20 +7,8 @@ RewriteEngine On
 RewriteCond %{REQUEST_URI}::$1 ^(/.+)/(.*)::\2$
 RewriteRule ^(.*) - [E=BASE_URI:%1]
 
-# Apache si tu vois des requetes vers des dossiers qui existent déjà (css, img, vendor, ...)
-# Fais comme d'habitude
-# Mais activer la réécriture d'URL SEULEMENT si l'URL demandée
-# n'est pas un dossier qui existe.
 RewriteCond %{REQUEST_FILENAME} !-d
-
-# Mais activer la réécriture d'URL SEULEMENT si l'URL demandée
-# n'est pas un fichier qui existe.
 RewriteCond %{REQUEST_FILENAME} !-f
 
-# Réécrire l'URL pour la correspondance 
-# entre nos chemins "virtuels" (/products) et les vrais chemins (index.php?page=products)
-# /products ==> index.php?page=products
-# /store    ==> index.php?page=store
-# /blog    ==> index.php?page=blog
-# /blabla    ==> index.php?page=blabla
+
 RewriteRule ^(.*)$ index.php?page=$1 [QSA,L]

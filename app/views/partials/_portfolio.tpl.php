@@ -1,6 +1,6 @@
-<div class="content-container"><section class="portfolio__section" id="portfolio" data-aos="fade-up">
+<section class="portfolio__section" id="portfolio" data-aos="fade-up">
     <h2>Mes projets</h2>
-    <p class="portfolio-description">Ces projets, excepté le site vitrine, sont des projets développés en parallèle de ma formation. Ils ne sont pas parfaits et utilisables dans un contexte professionnel, mais m'ont permis de consolider les connaissances vues en cours et d'explorer les limites des outils sans framework. Le site de messagerie est protégé par un mot de passe, n'hésitez pas à me contacter pour que je vous le transmette, ou à visiter mon espace Github</p>
+    <p class="portfolio-description">Ces projets, excepté le site vitrine, sont des projets développés en parallèle de ma formation. Ils ne sont pas parfaits et utilisables dans un contexte professionnel, mais m'ont permis de consolider les connaissances vues en cours et d'explorer les limites des outils sans framework. Le site de messagerie en ligne sera refait avec Symfony dès que ma formation sur le sijet sera complète</p>
     <select class="portfolio__section-select" id="site-type">
         <option value="">Sélectionnez un type de site</option>
         <option value="vitrine_contact">Site vitrine avec formulaire de contact</option>
@@ -9,14 +9,13 @@
         <option value="ecommerce">Site e-commerce</option>
         <option value="jeu">Jeu</option>
     </select>
-    <section class="portfolio">
+    <section class="portfolio" data-aos="fade-up">
    
         <?php foreach($viewVars['sites'] as $name => $infos) : ?>
             <div class="portfolio__image" >
             <div class="portfolio__title"><?= $name ?></div>
                 <div class="portfolio__text-container">
-                    <div class="portfolio__text">
-                        
+                    <div class="portfolio__text">   
                         <div class="portfolio__badges">
                             <?php foreach($infos['badges'] as $badge) : ?>
                                <div class="portfolio__badge" style="background-color:<?= $viewVars['badges'][$badge]->color?>" ><?= $viewVars['badges'][$badge]->name; ?></div> 

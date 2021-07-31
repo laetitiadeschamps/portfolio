@@ -15,7 +15,8 @@
       
     </article>
     <article id="formation" class="cv-section">
-            <h2>
+    <div class="ribbon ribbon--blue"><span>Formation</span></div>
+             <h2>
                 <i class="fas fa-graduation-cap"></i>Formation
             </h2>
             <article class="cv-section__container" style="overflow-x: hidden">
@@ -56,6 +57,7 @@
           
         </article>
         <article id="experiences" class="cv-section">
+        <div class="ribbon ribbon--red"><span>Expériences</span></div>
           <h2>
                 <i class="fas fa-user-tie"></i>Expériences professionnelles
             </h2>
@@ -93,6 +95,7 @@
           
         </article>
         <article id="competences" class="cv-section">
+        <div class="ribbon ribbon--yellow"><span>Compétences</span></div>
             <h2>
                 <i class="fas fa-code"></i>Compétences
             </h2>
@@ -159,6 +162,7 @@
             </div>
         </article>
         <article id="divers" class="cv-section">
+        <div class="ribbon ribbon--grey"><span>Divers</span></div>
             <h2>
                 <i class="fas fa-globe"></i>Divers
             </h2>

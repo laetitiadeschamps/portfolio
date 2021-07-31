@@ -8,7 +8,7 @@
     <title>Présentation</title>
     <link rel="icon" href="<?=$_SERVER['BASE_URI']?>/img/avatar-favicon.png?>" />
     <!-- Librairies -->
-    <script src="../node_modules/@sidsbrmnn/scrollspy/dist/scrollspy.min.js"></script>
+    <script src="https://unpkg.com/@sidsbrmnn/scrollspy@1.0.4/dist/scrollspy.min.js"></script> 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
     <!-- Fonts & css -->

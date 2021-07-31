@@ -13,7 +13,7 @@ const portfolio = {
     },
     //Method for showing appropriate image according to image url
     displayBackground:function(image) {
-        image.style.background='url(../public/img/'+ image.querySelector('.portfolio__url').textContent + ')';
+        image.style.background='url(../img/'+ image.querySelector('.portfolio__url').textContent + ')';
         image.style.backgroundPosition="center";
         image.style.backgroundSize="cover";
     },

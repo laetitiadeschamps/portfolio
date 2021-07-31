@@ -2,7 +2,7 @@
     <article class="cv-menu" id="parcours-nav"> 
         <h2>Mon parcours</h2>
         <nav> 
-            <ul>
+            <ul style="overflow-x: hidden">
                 <li data-aos="fade-down-left"><a href="#formation">Formation</a><div class="cv-menu__inner cv-menu__inner--formation"></div></li>
                 <li data-aos="fade-down-right"><a href="#experiences">Expériences</a><div class="cv-menu__inner cv-menu__inner--experiences"></div></li>
                 <li data-aos="fade-up-left"><a href="#competences">Compétences</a><div class="cv-menu__inner cv-menu__inner--competences"></div></li>
@@ -13,13 +13,12 @@
             <i class="fas fa-chevron-down scroll" data-target="formation"></i>
         </div>
       
-    
     </article>
     <article id="formation" class="cv-section">
             <h2>
                 <i class="fas fa-graduation-cap"></i>Formation
             </h2>
-            <article class="cv-section__container">
+            <article class="cv-section__container" style="overflow-x: hidden">
                 <div class="cv-section__infos left" data-aos="fade-left">
                     <p>Développement Web et Web Mobile </p><p><span class="school">O'clock</span></p>
                     <p class="dates">02/2021 - 08/2021</p>
@@ -60,7 +59,7 @@
           <h2>
                 <i class="fas fa-user-tie"></i>Expériences professionnelles
             </h2>
-            <div class="cv-section__container">
+            <div class="cv-section__container" style="overflow-x: hidden">
                 <div class="cv-section__infos left" data-aos="fade-left">
                     <p>Responsables des opérations, <span class="school">Hostmaker, Cannes</span></p>
                     <p class="dates">Novembre 2019 - Juillet 2020</p>
@@ -110,8 +109,8 @@
                 </div>
                 <div class="skills-section">
                     <h3>Autres compétences web</h3>
-                                <div data-aos="zoom-in" class="skills-section__card">
-                                   <div class="skills-section__card--title"> <i class="fas fa-sitemap"></i>Concepts et méthodes</div>
+                                <div data-aos="zoom-in" class="skills-section__card" >
+                                    <div class="skills-section__card--title"> <i class="fas fa-sitemap"></i>Concepts et méthodes</div>
                                    <div class="skills-section__card--body">
                                        <ul>
                                             <li>Architecture MVC</li>
@@ -119,8 +118,9 @@
                                             <li>Active Record</li>
                                             <li>Data Mapper</li>
                                             <li>BEM</li>
+                                            <li>Principes SOLID, KISS, DRY</li>
                                             <li>méthode Agile</li>
-                                       </ul> </div>
+                                       </ul> </div> 
                                 </div>
                                 <div data-aos="zoom-in" class="skills-section__card">
                                 <div class="skills-section__card--title"> 
@@ -147,9 +147,11 @@
                                     <div class="skills-section__card--title"> <i class="fas fa-database"></i>Back-end </div>
                                     <div class="skills-section__card--body">
                                         <ul>
-                                            <li>API & API REST</li>
-                                            <li>Doctrine & Eloquent</li>
+                                            <li>API & API REST (avec Lumen, Eloquent et Blade)</li>
+                                            <li>ORM : Doctrine & Eloquent</li>
                                             <li>CMS Wordpress</li>
+                                            <li>Symfony : EasyAdmin 3, Twig, Inky, Webpack, JWT, PHPUnit</li>
+                                            <li>Sockets (Ratchet)</li>
                                         </ul>    
                                     </div> 
                                 </div>
@@ -189,6 +191,6 @@
                 </div>
              
          
-            
+            </article>
         </section>
-                        </article>
+                      

@@ -90,6 +90,9 @@ class MainController {
                 $sanitizedMessage= $mainObj->sanitizeValue($message);
                 $this->addFlashMessage('Message envoyé!');
                 $sanitizedName . ' ' . $sanitizedEmail . ' ' . $sanitizedMessage;
+                $mailToSend = 'Bonjour, vous avez reçu un message de ' . $sanitizedName .' ! Email : ' . $sanitizedEmail .'. Message : ' . $sanitizedMessage;
+                mail('infos@laetitiadeschamps.com', 'Nouveau message !', $mailToSend, 'From: contact@laetitiadeschamps.com'. "\r\n" .
+                'Reply-To:"' . $sanitizedEmail .'"');
             } else {
                 $this->addFlashMessage('Veuillez revérifier votre saisie!');
             }   

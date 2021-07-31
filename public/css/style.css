@@ -866,7 +866,7 @@ footer {
         margin:2rem auto;  
     }
     .portfolio__image {
-        width:13em;
+        width:15%;
         min-height: 40vh;
         max-height:40vh;
         border:none;

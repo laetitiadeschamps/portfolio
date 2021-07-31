@@ -872,7 +872,13 @@ footer {
         max-height:40vh;
         border:none;
         margin:.5rem;
+       
     }
+    .active-img.portfolio__image {
+        flex-grow: 0;
+        width: 40%;
+    }
+   
     .portfolio__title {
         align-items: flex-end;
         padding: .5em 0 ;

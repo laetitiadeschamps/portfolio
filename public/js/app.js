@@ -11,6 +11,7 @@ const app = {
         app.scrollSpyConfig();
         //Launching loop over letters for home page
         app.loop();
+       
     },
     // Config of scrollspy library to track user scroll and activate appropriate menu item
     scrollSpyConfig:function() {
@@ -40,6 +41,7 @@ const app = {
     //Method for looping through letters to display animation on homepage
     loop:function() {
         const target = document.querySelector('#target');
+
         setTimeout(()=> {
             if(display.wordIndex >= display.words.length) {      
                 display.wordIndex = 0;

@@ -5,8 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Présentation</title>
+    <meta name="description" content ="Découvrez mon parcours et mes projets dans le milieu du développement web à travers ce portfolio développé en parallèle de ma formation et de ma préparation au TP DWWM.">
+    <title>Laetitia Deschamps | Développeuse Web</title>
     <link rel="icon" href="<?=$_SERVER['BASE_URI']?>/img/avatar-favicon.png?>" />
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120-precomposed.png" /> <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152-precomposed.png" />
     <!-- Librairies -->
     <script src="https://unpkg.com/@sidsbrmnn/scrollspy@1.0.4/dist/scrollspy.min.js"></script> 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
@@ -17,6 +19,7 @@
     <link rel="stylesheet" href="<?= $_SERVER['BASE_URI']?>/css/reset.css">
     <link rel="stylesheet" href="<?= $_SERVER['BASE_URI']?>/css/style.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+ 
 </head>
 <body id='top'>
     <div class="container">

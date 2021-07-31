@@ -23,7 +23,7 @@ class MainController {
             ],
             
             'Messagerie' => [
-                'image_name'=>'logo-messagerie.png',
+                'image_name'=>'logo-messagerie-php.png',
                 'badges'=>['JS', 'AJAX', 'POO', 'SQL', 'Websockets', 'Security'], 
                 'description'=> 'Messagerie en ligne avec système d\'amis et notifications - Vanilla PHP',
                 'type'=>'social',

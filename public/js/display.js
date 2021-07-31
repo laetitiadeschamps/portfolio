@@ -7,6 +7,7 @@ const display = {
     init:function() {
         display.letterIndex=0;
         display.wordIndex=0;
+        
         display.words=['Développer', 'Inventer', "S'améliorer", 'Apprendre'];
         //display.displayProgress();
         // For each scroll button, we handle target block accordingly
@@ -31,7 +32,13 @@ const display = {
         }, 2000)
     },
     handleAnimationClick:function() {
-        display.animationDuration -=0.1;    
+        
+        if(display.animationDuration > 0) {
+            display.animationDuration -=0.1;
+        } else {
+            display.animationDuration =0.5;
+        }   
+           
         display.animationDuration > 0 ? display.animationDuration = display.animationDuration.toFixed(1) : display.animationDuration == 0;
         document.querySelector('.home-scene__character').style.animationDuration = display.animationDuration +'s';
     

@@ -35,6 +35,13 @@ class MainController {
                 'description'=> 'Carte interactive basée sur l\'API leaflet',
                 'type'=>'map',
                 'url'=>'#'
+            ],
+            'Plateforme de prêt de mangas' => [
+                'image_name'=>'kasu.PNG',
+                'badges'=>['Symfony', 'PHP', 'SQL'], 
+                'description'=> 'Plateforme de prêt de manga entre particuliers avec Backoffice',
+                'type'=>'social',
+                'url'=>'#'
                 ]
             ];
             $badges = [
@@ -50,6 +57,7 @@ class MainController {
                 'API'=>new Skills('API', '#2c58a7', 60),
                 'SQL'=>new Skills('SQL', '#607d8b', 60),
                 'API REST'=>new Skills('LUMEN/API REST', '#ffeb3b', 60),
+                'Symfony'=>new Skills('Symfony', '#e91e63', 60),
 
             ];
             $langues = [

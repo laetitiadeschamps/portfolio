@@ -19,29 +19,36 @@ class MainController {
                 'badges'=>['HTML', 'CSS', 'JS', 'PHP'],
                 'description'=> 'Mini-jeu 2 joueurs',
                 'type'=>'jeu',
-                'url'=>'#'
+                'url'=>'https://github.com/laetitiadeschamps/puissance-4'
             ],
             
             'Messagerie' => [
                 'image_name'=>'logo-messagerie.png',
                 'badges'=>['JS', 'AJAX', 'POO', 'SQL', 'Websockets', 'Security'], 
-                'description'=> 'Messagerie en ligne avec système d\'amis et notifications',
+                'description'=> 'Messagerie en ligne avec système d\'amis et notifications - Vanilla PHP',
                 'type'=>'social',
-                'url'=>'#'
+                'url'=>'https://github.com/laetitiadeschamps/Symfony-tchat'
+            ],
+            'Messagerie Symfony' => [
+                'image_name'=>'logo-messagerie.png',
+                'badges'=>['JS', 'POO', 'SQL', 'Websockets', 'Security', 'Symfony'], 
+                'description'=> 'Messagerie en ligne avec système d\'amis et notifications - Symfony',
+                'type'=>'social',
+                'url'=>'https://github.com/laetitiadeschamps/Messagerie'
             ],
             'Carte interactive' => [
                 'image_name'=>'map.jpg',
                 'badges'=>['API', 'JS', 'API REST', 'SQL'], 
                 'description'=> 'Carte interactive basée sur l\'API leaflet',
                 'type'=>'map',
-                'url'=>'#'
+                'url'=>'https://github.com/laetitiadeschamps/map'
             ],
             'Plateforme de prêt de mangas' => [
                 'image_name'=>'kasu.PNG',
                 'badges'=>['Symfony', 'PHP', 'SQL'], 
                 'description'=> 'Plateforme de prêt de manga entre particuliers avec Backoffice',
                 'type'=>'social',
-                'url'=>'#'
+                'url'=>'https://github.com/laetitiadeschamps/prete-moi-tes-mangas'
                 ]
             ];
             $badges = [

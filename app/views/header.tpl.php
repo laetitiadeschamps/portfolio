@@ -21,7 +21,8 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
  
 </head>
-<body id='top'>
+<body>
+   
     <div class="container">
         <header>
             <div class="header-title">
@@ -31,7 +32,7 @@
             </div>
             <nav id="main-nav">
                 <ul>
-                    <li><a href="#top"><i class="menu-icon fas fa-home"></i> Présentation</a></li>
+                    <li><a href="#home"><i class="menu-icon fas fa-home"></i> Présentation</a></li>
                     <li><a href="#parcours">  <i class="menu-icon fas fa-code-branch"></i>Parcours</a></li>
                     <li><a href="#portfolio"><i class="menu-icon fas fa-briefcase"></i> </i>Portfolio</a></li>
                     <li><a href="#contact">  <i class="menu-icon fas fa-paper-plane"></i>Contact</a></li>

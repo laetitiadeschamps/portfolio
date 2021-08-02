@@ -7,7 +7,7 @@ const display = {
     init:function() {
         display.letterIndex=0;
         display.wordIndex=0;
-        
+       
         display.words=['Développer', 'Inventer', "S'améliorer", 'Apprendre'];
         //display.displayProgress();
         // For each scroll button, we handle target block accordingly
@@ -17,7 +17,12 @@ const display = {
         // Toggle hamburger display on click or on scroll, as it only appears after scrollong down a bit
         document.querySelector('#hamburger').addEventListener('click', display.handleHamburgerClick);
         document.addEventListener('scroll', display.handleHamburgerDisplay);
-        
+        //handles dark mode changes
+        display.updateFromOsMode();
+        //Fixes bug on mobile browsers
+        display.resizeHome();
+        window.addEventListener('resize', display.handleWindowResize);
+        document.addEventListener('scroll', display.handleHomeSize);
         document.querySelector('.home-scene__character').addEventListener('click', display.handleAnimationClick);
 
     }, 
@@ -48,6 +53,7 @@ const display = {
     },
     //Method for showing /hiding hamburger and scroll to top arrow according to scroll of user
     handleHamburgerDisplay:function() { 
+      
         if(window.scrollY > 300){
             document.getElementById('hamburger').classList.add('visible');
             document.getElementById('back-to-top').classList.add('visible');
@@ -70,6 +76,26 @@ const display = {
        let ancre = e.currentTarget.dataset.target;
        location.href = "#" + ancre;
     },
+    resizeHome:function() {
+            const homeHeight = document.querySelector('#home').clientHeight;
+            document.querySelector('#home').style.height = homeHeight+'px';
+            document.querySelector('#home').style.minHeight = homeHeight+'px';
+    },
+   
+    updateFromOsMode:function() {
+        let matched = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+        if(matched){
+            
+            document.querySelectorAll('#hamburger span').forEach(span=> {
+                span.style.backgroundColor="white";
+            })
+        }
+    },
+    handleWindowResize:function() {
+        document.querySelector('#home').style.height="85vh";
+        display.resizeHome();
+    }
    
     
    

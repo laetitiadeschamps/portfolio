@@ -17,6 +17,7 @@ html {
     scroll-snap-type: y proximity;     
 }
 
+
 body {
     background-color: var(--color-secondary);
     position: relative;
@@ -136,7 +137,7 @@ nav ul li.active i {
     position: absolute;
     height: 9px;
     width: 100%;
-    background: black;
+    background-color: black;
     border-radius: 9px;
     opacity: 1;
     left: 0;   
@@ -205,6 +206,7 @@ nav ul li.active i {
     padding:0;    
     align-items: center;
     min-height:85vh;
+  
 }
 
 
@@ -655,8 +657,8 @@ nav ul li.active i {
 }
 .active-img {
     flex-grow:100;
-    min-height: 30vh;
-    height: 30vh;
+    min-height: 33vh;
+    height: 33vh;
     max-width: 100%;  
 }
 
@@ -802,6 +804,9 @@ footer {
         background: url('../img/web.jpg');
         background-size: cover;
     }
+    .header-title {
+      text-align: left;
+    }
     #main-nav {
         position: static;
         background-color: transparent;
@@ -843,7 +848,6 @@ footer {
     /* Home  */
     #home {
         flex-direction: row; 
-        min-height: 90vh;  
         justify-content: space-between; 
     }
     .home-letters {
@@ -992,5 +996,5 @@ footer {
         height:40%;
         flex-grow: 1;
     }   
-
+   
 }

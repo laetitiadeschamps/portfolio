@@ -97,36 +97,4 @@ const display = {
         display.resizeHome();
     }
    
-    
-   
-    // displayActiveTab:function() {
-    //     let tabs =document.querySelectorAll('nav li a');
-    //     tabs.forEach(tab=>  {
-    //         console.log(tab.href);
-    //         console.log(document.location.href);
-    //         console.log(tab.href == document.location.href);
-    //         tab.parentNode.classList.remove('active');
-            
-    //       if(tab.href == document.location.href) {
-    //           tab.parentNode.classList.add('active');
-    //       }
-          
-    //     })
-    // },
-    // handleTabClick:function(e){
-    //     display.displayActiveTab();
-    // },
-    //  displayProgress:function() {
-    //     const bars = document.querySelectorAll('.skills-section__progress-bar');
-      
-
-    //     bars.forEach(bar=> {
-    //         let progress = bar.querySelector('.advancement').textContent;
-    //         let color = bar.querySelector('.color').textContent;
-    //         console.log(progress);
-    //         bar.querySelector('.full').style.width = progress + '%';
-    //         // bar.querySelector('.full').style.background =  color;
-    //     })
-    // },
-
 }
